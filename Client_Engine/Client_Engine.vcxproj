@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{59121C3A-B717-4AAB-8861-53297F3DAB04}</ProjectGuid>
+    <RootNamespace>ClientEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>./DX_Include;./LuaSource;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="Model\myPlane\tiger.bmp" />
+    <Image Include="tiger.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InitScene.lua" />
+    <None Include="LuaScript\myPlane\myPlane.lua" />
+    <None Include="LuaScript\myPlane\myPlane1.lua" />
+    <None Include="LuaScript\myPlane\myPlanec.lua" />
+    <None Include="LuaScript\null.lua" />
+    <None Include="LuaScript\sourceObject.lua" />
+    <None Include="LuaScript\sourceObject1.lua" />
+    <None Include="LuaScript\zidan\zidan.lua" />
+    <None Include="LuaScript\zidan\zidan1.lua" />
+    <None Include="luatest.lua" />
+    <None Include="Makefile" />
+    <None Include="Model\myPlane\tiger.x" />
+    <None Include="tiger.x" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EngineMessage.cpp" />
+    <ClCompile Include="EnginePhysic.cpp" />
+    <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="gameObject.cpp" />
+    <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="LuaSource\lapi.c" />
+    <ClCompile Include="LuaSource\lauxlib.c" />
+    <ClCompile Include="LuaSource\lbaselib.c" />
+    <ClCompile Include="LuaSource\lbitlib.c" />
+    <ClCompile Include="LuaSource\lcode.c" />
+    <ClCompile Include="LuaSource\lcorolib.c" />
+    <ClCompile Include="LuaSource\lctype.c" />
+    <ClCompile Include="LuaSource\ldblib.c" />
+    <ClCompile Include="LuaSource\ldebug.c" />
+    <ClCompile Include="LuaSource\ldo.c" />
+    <ClCompile Include="LuaSource\ldump.c" />
+    <ClCompile Include="LuaSource\lfunc.c" />
+    <ClCompile Include="LuaSource\lgc.c" />
+    <ClCompile Include="LuaSource\linit.c" />
+    <ClCompile Include="LuaSource\liolib.c" />
+    <ClCompile Include="LuaSource\llex.c" />
+    <ClCompile Include="LuaSource\lmathlib.c" />
+    <ClCompile Include="LuaSource\lmem.c" />
+    <ClCompile Include="LuaSource\loadlib.c" />
+    <ClCompile Include="LuaSource\lobject.c" />
+    <ClCompile Include="LuaSource\lopcodes.c" />
+    <ClCompile Include="LuaSource\loslib.c" />
+    <ClCompile Include="LuaSource\lparser.c" />
+    <ClCompile Include="LuaSource\lstate.c" />
+    <ClCompile Include="LuaSource\lstring.c" />
+    <ClCompile Include="LuaSource\lstrlib.c" />
+    <ClCompile Include="LuaSource\ltable.c" />
+    <ClCompile Include="LuaSource\ltablib.c" />
+    <ClCompile Include="LuaSource\ltm.c" />
+    <ClCompile Include="LuaSource\lundump.c" />
+    <ClCompile Include="LuaSource\lvm.c" />
+    <ClCompile Include="LuaSource\lzio.c" />
+    <ClCompile Include="MessageAccepter.cpp" />
+    <ClCompile Include="MessageManager.cpp" />
+    <ClCompile Include="ProjectHead.cpp" />
+    <ClCompile Include="SceneObject.cpp" />
+    <ClCompile Include="SceneObjectList.cpp" />
+    <ClCompile Include="shap.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EngineMessage.h" />
+    <ClInclude Include="EnginePhysic.h" />
+    <ClInclude Include="GameEngine.h" />
+    <ClInclude Include="gameObject.h" />
+    <ClInclude Include="GameScene.h" />
+    <ClInclude Include="LuaSource\lapi.h" />
+    <ClInclude Include="LuaSource\lauxlib.h" />
+    <ClInclude Include="LuaSource\lcode.h" />
+    <ClInclude Include="LuaSource\lctype.h" />
+    <ClInclude Include="LuaSource\ldebug.h" />
+    <ClInclude Include="LuaSource\ldo.h" />
+    <ClInclude Include="LuaSource\lfunc.h" />
+    <ClInclude Include="LuaSource\lgc.h" />
+    <ClInclude Include="LuaSource\llex.h" />
+    <ClInclude Include="LuaSource\llimits.h" />
+    <ClInclude Include="LuaSource\lmem.h" />
+    <ClInclude Include="LuaSource\lobject.h" />
+    <ClInclude Include="LuaSource\lopcodes.h" />
+    <ClInclude Include="LuaSource\lparser.h" />
+    <ClInclude Include="LuaSource\lstate.h" />
+    <ClInclude Include="LuaSource\lstring.h" />
+    <ClInclude Include="LuaSource\ltable.h" />
+    <ClInclude Include="LuaSource\ltm.h" />
+    <ClInclude Include="LuaSource\lua.h" />
+    <ClInclude Include="LuaSource\luaconf.h" />
+    <ClInclude Include="LuaSource\lualib.h" />
+    <ClInclude Include="LuaSource\lundump.h" />
+    <ClInclude Include="LuaSource\lvm.h" />
+    <ClInclude Include="LuaSource\lzio.h" />
+    <ClInclude Include="MessageAccepter.h" />
+    <ClInclude Include="MessageManager.h" />
+    <ClInclude Include="ProjectHead.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SceneObject.h" />
+    <ClInclude Include="SceneObjectList.h" />
+    <ClInclude Include="shap.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
